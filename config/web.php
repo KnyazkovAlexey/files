@@ -15,8 +15,17 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
         ],
+        'assetManager' => [
+            'linkAssets' => true,
+            'appendTimestamp' => true,
+        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
+        ],
+    ],
+    'modules' => [
+        'file' => [
+            'class' => \app\modules\file\Module::class,
         ],
     ],
 ];
