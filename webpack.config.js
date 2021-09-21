@@ -1,12 +1,18 @@
 const { VueLoaderPlugin } = require('vue-loader');
 const TerserPlugin = require('terser-webpack-plugin');
-var MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const path = require('path');
 
 const isDev = process.env.NODE_ENV == 'development';
 const isProd = !isDev;
 
 module.exports = {
+    resolve: {
+        alias: {
+            CommonComponents: path.resolve(__dirname, 'vue/common/components/'),
+        },
+    },
     module: {
         rules: [
             { test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' },

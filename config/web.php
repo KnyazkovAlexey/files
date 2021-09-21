@@ -7,6 +7,11 @@ $config = [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
         ],
+        'request' => [
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+            ],
+        ],
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
@@ -21,11 +26,23 @@ $config = [
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
+            'targets' => [
+                [
+                    'class' => 'yii\log\FileTarget',
+                    'levels' => ['error', 'warning'],
+                ],
+            ],
         ],
     ],
+    'bootstrap' => [
+        'files',
+    ],
     'modules' => [
-        'file' => [
-            'class' => \app\modules\file\Module::class,
+        'files' => [
+            'class' => \app\modules\files\Module::class,
+        ],
+        'api' => [
+            'class' => \app\modules\api\Module::class,
         ],
     ],
 ];

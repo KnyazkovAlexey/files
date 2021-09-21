@@ -6,6 +6,16 @@ $config = [
     'aliases' => [
         '@tests' => '@app/tests',
     ],
+    'components' => [
+        'log' => [
+            'targets' => [
+                [
+                    'class' => 'yii\log\FileTarget',
+                    'levels' => ['error', 'warning'],
+                ],
+            ],
+        ],
+    ],
 ];
 
 return $config;
