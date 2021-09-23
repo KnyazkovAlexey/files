@@ -2,9 +2,9 @@
 
 namespace app\modules\api\modules\v1\controllers;
 
-use app\modules\files\models\forms\UploadForm;
-use app\modules\files\models\UploadedFile as UploadedFileModel;
-use app\modules\files\services\FileUploadService;
+use app\modules\api\modules\v1\models\forms\UploadForm;
+use app\modules\api\modules\v1\models\UploadedFile as UploadedFileModel;
+use app\modules\api\modules\v1\services\FileUploadService;
 use yii\filters\ContentNegotiator;
 use yii\filters\VerbFilter;
 use yii\rest\ActiveController;

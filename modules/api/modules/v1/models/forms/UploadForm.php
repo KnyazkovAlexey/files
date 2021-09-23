@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\files\models\forms;
+namespace app\modules\api\modules\v1\models\forms;
 
 use app\behaviors\FirstErrorBehavior;
 use yii\base\Model;
@@ -13,9 +13,7 @@ use yii\web\UploadedFile;
  */
 class UploadForm extends Model
 {
-    /**
-     * @var UploadedFile[] $files
-     */
+    /** @var UploadedFile[] $files */
     public array $files = [];
 
     /**

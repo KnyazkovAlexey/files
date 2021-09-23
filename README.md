@@ -18,9 +18,9 @@
 
 <pre>
 1). php yii migrate
-2). composer install
-3). npm install
-
+2). composer check-platform-reqs
+3). composer install
+4). npm install
 </pre>
 
 <p align="center">

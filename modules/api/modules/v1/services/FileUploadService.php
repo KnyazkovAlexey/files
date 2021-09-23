@@ -1,10 +1,10 @@
 <?php
 
-namespace app\modules\files\services;
+namespace app\modules\api\modules\v1\services;
 
 use yii\helpers\Inflector;
 use yii\web\UploadedFile;
-use app\modules\files\models\UploadedFile as UploadedFileModel;
+use app\modules\api\modules\v1\models\UploadedFile as UploadedFileModel;
 use Exception;
 use Throwable;
 use Yii;

@@ -8,10 +8,6 @@ paths:
 settings:
     memory_limit: 1024M
     colors: true
-modules:
-    config:
-        Yii2:
-            configFile: 'config/test.php'
 
 # To enable code coverage:
 #coverage:
